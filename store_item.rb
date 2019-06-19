@@ -24,26 +24,35 @@
 
 
 class FaceFoundation
+   attr_reader :brand
+   attr_writer :number
 
-  def initialize(brand, name, shade, number)
-    @brand = brand
-    @name = name
-    @shade = shade
-    @number = number
+  def initialize(foundations)
+    @brand = foundations[:brand]
+    @name = foundations[:name]
+    @shade = foundations[:shade]
+    @number = foundations[:number]
 
   end
 
-  
- def
+
 
   def print_info
     "The foundation I use is from #{@brand} which is called #{@name}, shade #{@shade} and here is the number #{@number}. Try it."
   end 
 end 
 
- first_foundation = (FaceFoundation.new("Mac", "Striboli", "Beige", "number"))
+ first_foundation = FaceFoundation.new(brand: "Mac", name: "Striboli", shade: "Beige", number: "48")
 
-p first_foundation.print_info
+ p first_foundation.brand
+
+# p first_foundation.print_info
+
+# p first_foundation.brand
+
+# first_foundation.number = "44"
+
+# p first_foundation.number
 
 
 
